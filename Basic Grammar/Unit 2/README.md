@@ -4,7 +4,7 @@
 
 ## 명사  
 
-<a href="https://youtu.be/9OT56GtsChM?si=5eTi_ASc9iLbcRE6="_blank">
+<a href="https://youtu.be/9OT56GtsChM?si=5eTi_ASc9iLbcRE6" target="_blank">
     <img src="https://img.shields.io/badge/YouTube-Basic_Grammar_2-red?logo=youtube&logoColor=white&style=for-the-badge" alt="Youtube" /></a>
 
 </div>

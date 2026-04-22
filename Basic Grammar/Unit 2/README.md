@@ -36,7 +36,7 @@
 
 
 <details>
-  <summary>📝 예제 문제</summary>
+  <summary>📝 예제 문제</summary> <br> 
 
     Q1. We purchased new office ___ last week.  
     (A) desk  

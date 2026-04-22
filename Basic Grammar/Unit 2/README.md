@@ -38,8 +38,6 @@
 <details>
   <summary>📝 예제 문제</summary>
 
----
-
     Q1. We purchased new office ___ last week.  
     (A) desk  
     (B) furniture  
@@ -49,8 +47,6 @@
     (B) tip  
 
     ANSWER : 1-(B), 2-(A)  
-
----
 
 </details> <br>  
 

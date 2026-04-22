@@ -34,7 +34,6 @@
     - [ex] water, furniture, equipment, baggage/luggage, information, money, advice
 - 'The' : 가산 명사, 불가산 명사 모두 사용 가능
 
-
 <details>
   <summary>📝 예제 문제</summary> <br> 
 
@@ -51,3 +50,37 @@
 </details> <br>  
 
 ## 사람 명사 vs 사물 명사  
+- 사람 명사 : 가산 명사 ('a/an' 또는 '-s'가 붙어야 함)
+    - 단어의 뒤에 **-er, -or, -ee, -ant**로 끝나면 사람 명사로 판단
+- 사물 명사 : 가산 명사 및 불가산 명사 모두 가능
+
+<details>
+  <summary>📝 예제 문제</summary> <br> 
+
+    Q1. Mr.Warren will hire a career ___ soon.
+    (A) advice
+    (B) tips
+    (C) advisor
+
+    Q2. Poor ___ was one of the main reasons for the decline in class performance this semester.
+    (A) attendee
+    (B) attendance
+
+    ANSWER : 1-(C), 2-(B)  
+
+</details> <br>  
+
+## 대명사는 '소유격 + 명사'가 빈출  
+> 소유격 : 주로 '~의'로 해석되는 인칭대명사의 한 종류
+> [ex] my, your, his, her, their, its, our
+
+<details>
+  <summary>📝 예제 문제</summary> <br> 
+
+    Q1. We oppreciate your ___ during the transition period.
+    (A) assist
+    (B) assistance
+
+    ANSWER : 1-(B)  
+
+</details> <br> 

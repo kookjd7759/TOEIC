@@ -64,3 +64,7 @@
 - in spite of - in spite of an in jury
 
 ## 전명구  
+- 단어 : 1단어
+- 구 : 2단어 이상, 
+- 절 : 2단어 이상, 주어 + 동사 형태
+

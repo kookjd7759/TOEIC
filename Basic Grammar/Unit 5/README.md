@@ -11,7 +11,7 @@
 
 ## 토익 필수 전치사 총정리  
 1. at, on, in  
-> ~에
+> ~에  
     - [시간/시점]
         - at + 구체적인 시각 - at **6 A.M / 3 o'clock**
         - on + 몇월 몇일(날짜), ~day - on **April 7 / Saturday**
@@ -21,15 +21,15 @@
         - on + 접촉(면) - on a table / on a wall
         - in + 3차원 공간, 행정구역 - in Seoul / in the calssroom
 2. before, after  
-> before ~전에, after ~이후에
+> before ~전에, after ~이후에  
     - before + 시점 - before Friday / before 9 A.M
     - after + 시점/기간 - after lunch / after three hours
 3. for, during  
-> ~하는 동안
+> ~하는 동안  
     - for + 숫자(기간) - for three days / for ten years
     - during + 특정 기간 명사 - during the holiday / during the meeting
 4. by, until  
-> ~까지
+> ~까지  
     - by(일회성) - submit the report by Friday/7 P.M
     - until(지속성) - Please wait until tomorrow
 5. through, throughout

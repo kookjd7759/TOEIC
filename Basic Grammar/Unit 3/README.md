@@ -4,7 +4,7 @@
 
 ## 동사 (수/태/시제)  
 
-<a href="https://youtu.be/UbChz41U3bs?si=H_dfXTcBf0jU_So3"_blank">
+<a href="https://youtu.be/UbChz41U3bs?si=H_dfXTcBf0jU_So3">
     <img src="https://img.shields.io/badge/YouTube-Basic_Grammar_3-red?logo=youtube&logoColor=white&style=for-the-badge" alt="Youtube" /></a>
 
 </div>

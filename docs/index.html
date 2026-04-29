@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TOEIC Learning Hub</title>
+    <link rel="stylesheet" href="styles.css?v=20260429-2" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Course navigation">
+        <header class="sidebar-header">
+          <p class="eyebrow">TOEIC</p>
+          <h1>Learning Hub</h1>
+          <p>기초부터 토익 유형까지 차근차근 쌓아가는 영어 학습 노트</p>
+        </header>
+        <div class="sidebar-section-title">Curriculum</div>
+        <nav id="tree" class="tree" aria-label="Course lessons"></nav>
+      </aside>
+
+      <main class="content">
+        <div class="content-toolbar">
+          <button id="sidebarToggle" class="icon-button" type="button" aria-label="Toggle explorer" title="Toggle explorer">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div>
+            <p class="eyebrow">Current Lesson</p>
+            <h2 id="currentTitle">Course Overview</h2>
+          </div>
+        </div>
+
+        <article id="lesson" class="markdown-body" aria-live="polite">
+          <p>Loading lesson...</p>
+        </article>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@15.0.7/marked.min.js"></script>
+    <script src="app.js?v=20260429-2"></script>
+  </body>
+</html>

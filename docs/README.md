@@ -1,4 +1,4 @@
-[Open TOEIC Web Page](./index.html)
+[Open TOEIC Web Page](https://kookjd7759.github.io/TOEIC/)
 
 # TOEIC  
 TOEIC 학습을 체계적으로 정리하기 위해 만든 영어 학습 공간입니다.  

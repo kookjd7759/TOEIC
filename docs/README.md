@@ -1,4 +1,4 @@
-[GitHub Repository (main)](https://github.com/kookjd7759/TOEIC/tree/main)
+[Open TOEIC Web Page](./index.html)
 
 # TOEIC  
 TOEIC 학습을 체계적으로 정리하기 위해 만든 영어 학습 공간입니다.  

@@ -1,3 +1,9 @@
+const repoConfig = {
+  owner: "kookjd7759",
+  repo: "TOEIC",
+  branch: "main",
+};
+
 const readmes = [
   { path: "README.md", slug: "overview", title: "Course Overview", label: "Course Overview" },
   { path: "Basic Grammar/README.md", slug: "basic-grammar", title: "Basic Grammar", label: "Basic Grammar" },
@@ -21,6 +27,48 @@ marked.setOptions({
   headerIds: true,
   mangle: false,
 });
+
+function buildRawFileUrl(path) {
+  const encodedPath = path
+    .split("/")
+    .map((segment) => encodeURIComponent(segment))
+    .join("/");
+
+  return `https://raw.githubusercontent.com/${repoConfig.owner}/${repoConfig.repo}/${repoConfig.branch}/${encodedPath}`;
+}
+
+function buildFetchCandidates(path) {
+  const repoPath = path === "README.md" ? "docs/README.md" : path;
+  const relativeCandidates = path === "README.md"
+    ? ["README.md", "docs/README.md", "../docs/README.md"]
+    : [`../${path}`, path, `docs/${path}`];
+
+  const candidates = [...relativeCandidates, buildRawFileUrl(repoPath)];
+  return [...new Set(candidates)];
+}
+
+async function fetchReadmeWithFallback(path) {
+  const candidates = buildFetchCandidates(path);
+  let lastError = null;
+
+  for (const candidate of candidates) {
+    try {
+      const requestUrl = candidate.startsWith("http") ? candidate : encodeURI(candidate);
+      const response = await fetch(requestUrl, { cache: "no-store" });
+      if (!response.ok) {
+        lastError = new Error(`${response.status} ${response.statusText} (${candidate})`);
+        continue;
+      }
+
+      return await response.text();
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      lastError = new Error(`${message} (${candidate})`);
+    }
+  }
+
+  throw lastError ?? new Error("Could not fetch note content.");
+}
 
 function createTree(paths) {
   const root = { name: "TOEIC", type: "folder", path: null, title: null, children: new Map() };
@@ -70,7 +118,7 @@ function renderTreeNode(node) {
     const toggle = document.createElement("button");
     toggle.className = "tree-toggle";
     toggle.type = "button";
-    toggle.textContent = child.type === "folder" && hasChildren ? "›" : "";
+    toggle.textContent = child.type === "folder" && hasChildren ? ">" : "";
     toggle.ariaLabel = `${child.name} toggle`;
 
     const main = document.createElement("button");
@@ -128,18 +176,15 @@ async function loadReadme(path, options = {}) {
   const file = readmes.find((entry) => entry.path === path) ?? readmes[0];
   currentTitle.textContent = file.title;
   setActive(file.path);
+
   if (updateHash && window.location.hash !== `#${file.slug}`) {
     window.location.hash = file.slug;
   }
+
   lessonRoot.innerHTML = "<p>Loading lesson...</p>";
 
   try {
-    const response = await fetch(encodeURI(file.path), { cache: "no-store" });
-    if (!response.ok) {
-      throw new Error(`${response.status} ${response.statusText}`);
-    }
-
-    const markdown = await response.text();
+    const markdown = await fetchReadmeWithFallback(file.path);
     const html = marked.parse(markdown);
     lessonRoot.innerHTML = DOMPurify.sanitize(html, {
       ADD_ATTR: ["target"],
@@ -147,8 +192,9 @@ async function loadReadme(path, options = {}) {
   } catch (error) {
     lessonRoot.innerHTML = `
       <div class="error">
-        <strong>학습 노트를 불러오지 못했습니다.</strong>
+        <strong>Could not load this lesson note.</strong>
         <p>${file.path}</p>
+        <p>Tried: ${buildFetchCandidates(file.path).join(" | ")}</p>
         <p>${error.message}</p>
       </div>
     `;

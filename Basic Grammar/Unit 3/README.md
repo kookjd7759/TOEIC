@@ -63,7 +63,7 @@
 - 과거시제 단서 : yesterday (어제), ago (전에), last week/month (지난 주/달)
     - Mr.Kim (attends / attended) the client meeting yesterday.
     - SG Electronics (launched / launched) a new blender two weeks ago.
-- 과거시제 단서 : tomorrow (내일), soon (곧), shortly (곧)
+- 미래시제 단서 : tomorrow (내일), soon (곧), shortly (곧)
     - MS.Park (joined / well join) the video conference shortly.
     - The city officials (attend / will attend) the meeting tomorrow.
 - 현재완료시제 단서 : since + 과거시점 (~이래로), for + 기간 (~동안)
